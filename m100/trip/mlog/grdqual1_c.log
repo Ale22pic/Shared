@@ -1,0 +1,177 @@
+200 words of size 1 bytes callocated for char *cvals1 at 0x151b310
+400 words of size 1 bytes callocated for char *cvals2 at 0x151d3f0
+200 words of size 1 bytes callocated for char *cvals3 at 0x151d590
+#################################################
+process id = 3196655
+my_id=0, my_sz=1
+CFD++: Version 19.1, Update 11
+Compilation TIMESTAMP: Jan 22 2022 08:37:50
+MCFD_LICEXT TIMESTAMP: Sat Jan 22 01:02:19 2022
+-------------------------------------------------
+Computer hostname is dvvis02
+Computer system type is LINUX
+#################################################
+Current working directory is:
+/davinci-1/home/apiccolo_ext/Image/m100/trip
+#################################################
+#################################################
+Current shell is:
+/bin/bash
+#################################################
+#################################################
+Current Software Version, Update:
+CFD++: Version 19.1, Update 11
+#################################################
+This software is protected by copyright laws
+of the United States of America.
+This software is subject to SBIR Data Rights clauses
+and unauthorized disclosure and distribution is prohibited.
+Timestamp at run-begin: (1672929205Es) Thu Jan  5 15:33:25 2023
+-------------------------------------------------------
+Computer system name is defined in sysname.h
+-------------------------------------------------------
+This is a list of computer-dependent macros:
+(for more information see 'sysdep*.h' files)
+-----------------------------
+Macro Name    Macro expansion
+----------    ---------------
+Computer      LINUX
+INTG          int
+UINTG         unsigned int
+LONGINTG      long int
+INTG8BYTE     long long int
+REAL          double
+REAL8BYTE     double
+MC_OFF_T      long
+SEEK_SET      0
+MC_STDC       1
+CONST         const
+SEEK_CUR      1
+SEEK_END      2
+MCFD_PROCMEM  2G
+MCFD_MAXMEM   2G
+MCFD_SPROCMEM NULL (undefined)
+MCFD_PPROCMEM NULL (undefined)
+SINGLECPU_MC  defined
+OPENGL_MC     defined
+read_imap     2
+writ_imap     2
+read_ima8     3
+writ_ima8     3
+read_fmap     3
+writ_fmap     3
+read_fma4     22
+writ_fma4     27
+read_fma8     3
+writ_fma8     3
+-------------------------------------------------------
+sizeof(char)      = 1 bytes
+sizeof(int)       = 4 bytes
+sizeof(long int)  = 8 bytes
+sizeof(short int) = 2 bytes
+sizeof(long long) = 8 bytes
+sizeof(MC_OFF_T)  = 8 bytes
+sizeof(float)     = 4 bytes
+sizeof(double)    = 8 bytes
+sizeof(void *)    = 8 bytes
+sizeof(size_t)    = 8 bytes
+-------------------------------------------------------
+--------------------------------------------------
+Allocation information from eqnsmem.c
+1192 words of size 4 bytes callocated for INTG *iarr at 0x151f0c0
+1300 words of size 8 bytes callocated for REAL *rarr at 0x1520370
+24576 words of size 1 bytes callocated for char *carr at 0x1522c20
+256 words of size 8 bytes callocated for char **eqnsinf[0].eqntit at 0x151d9f0
+256 words of size 8 bytes callocated for char **eqnsinf[0].qprtit at 0x1528c30
+256 words of size 8 bytes callocated for char **eqnsinf[0].ps_qprtit at 0x1529440
+--------------------------------------------------
+13 words of size 152 bytes callocated for struct tree *trees at 0x1529c50
+10 words of size 104 bytes callocated for struct xyzsort *xyzsorts at 0x151e200
+100 words of size 4 bytes callocated for INTG *cta_nfa_arr1 at 0x151e620
+100 words of size 4 bytes callocated for INTG *cta_nfa_arr2 at 0x152a410
+100 words of size 4 bytes callocated for INTG *cta_nvx_arr1 at 0x152a5b0
+100 words of size 4 bytes callocated for INTG *cta_nvx_arr2 at 0x152a750
+100 words of size 4 bytes callocated for INTG *cta_nfv_arr1 at 0x152a8f0
+100 words of size 4 bytes callocated for INTG *cta_nfv_arr2 at 0x152aa90
+100 words of size 4 bytes callocated for INTG *cta_nfv_arr3 at 0x152ac30
+100 words of size 4 bytes callocated for INTG *cta_nfv_arr4 at 0x152add0
+100 words of size 4 bytes callocated for INTG *cta_nfv_arr5 at 0x152af70
+100 words of size 4 bytes callocated for INTG *cta_nfv_arr6 at 0x152b110
+100 words of size 4 bytes callocated for INTG *cta_nfv2_arr1 at 0x152b2b0
+100 words of size 4 bytes callocated for INTG *cta_nfv2_arr2 at 0x152b450
+100 words of size 4 bytes callocated for INTG *cta_nfv2_arr3 at 0x152b5f0
+100 words of size 4 bytes callocated for INTG *cta_nfv2_arr4 at 0x152b790
+100 words of size 4 bytes callocated for INTG *cta_nfv2_arr5 at 0x152b930
+100 words of size 4 bytes callocated for INTG *cta_nfv2_arr6 at 0x152bad0
+100 words of size 4 bytes callocated for INTG *cta_bva_arr1 at 0x152bc70
+100 words of size 4 bytes callocated for INTG *cta_bva_arr2 at 0x152be10
+100 words of size 4 bytes callocated for INTG *cta_cva_arr1 at 0x152bfb0
+100 words of size 4 bytes callocated for INTG *cta_cva_arr2 at 0x152c150
+--------------------------------------------------
+Allocation information from cellsmem.c
+860160 words of size 16 bytes callocated for struct cellinfo *celinf at 0x146c81431010
+860161 words of size 8 bytes callocated for INTG8BYTE *celptr at 0x146c80da0010
+6881280 words of size 4 bytes callocated for INTG *celvar at 0x146c7f35f010
+--------------------------------------------------
+--------------------------------------------------mc_prallo.c begin
+Memory allocated using mc_calloc  =       47099 KiloBytes (46 MB)
+Memory allocation total (method 1)=       47099 KiloBytes (46 MB)
+Memory allocation total (method 2)=       47099 KiloBytes (46 MB)
+--------------------------------------------------mc_prallo.c end
+--------------------------------------------------mc_prallo.c begin
+Memory allocated using mc_calloc  =       47099 KiloBytes (46 MB)
+Memory allocation total (method 1)=       47099 KiloBytes (46 MB)
+Memory allocation total (method 2)=       47099 KiloBytes (46 MB)
+--------------------------------------------------mc_prallo.c end
+--------------------------------------------------mc_prallo.c begin
+Memory allocated using mc_calloc  =       47099 KiloBytes (46 MB)
+Memory allocation total (method 1)=       47099 KiloBytes (46 MB)
+Memory allocation total (method 2)=       47099 KiloBytes (46 MB)
+--------------------------------------------------mc_prallo.c end
+100 words of size 4 bytes callocated for INTG *vFacs at 0x152c2f0
+100 words of size 4 bytes callocated for INTG *ckey at 0x152c490
+100 words of size 4 bytes callocated for INTG *fLvxs at 0x152c630
+100 words of size 4 bytes callocated for INTG *ckey at 0x152c7d0
+100 words of size 4 bytes callocated for INTG *fLvxs at 0x152c970
+100 words of size 4 bytes callocated for INTG *fGvxs at 0x152cb10
+--------------------------------------------------
+Allocation information from nodesmem.c
+885417 words of size 4 bytes callocated for struct nodeinfo *nodinf at 0x146c7effe010
+--------------------------------------------------
+--------------------------------------------------
+Allocation information from nodesmem.c
+5312502 words of size 8 bytes callocated for REAL *nodvar at 0x146c7c776010
+--------------------------------------------------
+--------------------------------------------------mc_prallo.c begin
+Memory allocated using mc_calloc  =       92064 KiloBytes (90 MB)
+Memory allocation total (method 1)=       92064 KiloBytes (90 MB)
+Memory allocation total (method 2)=       92064 KiloBytes (90 MB)
+--------------------------------------------------mc_prallo.c end
+--------------------------------------------------mc_prallo.c begin
+Memory allocated using mc_calloc  =       92064 KiloBytes (90 MB)
+Memory allocation total (method 1)=       92064 KiloBytes (90 MB)
+Memory allocation total (method 2)=       92064 KiloBytes (90 MB)
+--------------------------------------------------mc_prallo.c end
+100 words of size 4 bytes callocated for INTG *cgtrack at 0x152ccb0
+--------------------------------------------------
+Allocation information from volsmem.c
+860160 words of size 8 bytes callocated for REAL *voln at 0x146c7c0e5010
+860160 words of size 8 bytes callocated for REAL *volr at 0x146c7ba54010
+--------------------------------------------------
+--------------------------------------------------
+Allocation information from volsmem.c
+860160 words of size 8 bytes callocated for REAL *xcen at 0x146c7b3c3010
+--------------------------------------------------
+--------------------------------------------------
+Allocation information from volsmem.c
+860160 words of size 8 bytes callocated for REAL *ycen at 0x146c7ad32010
+--------------------------------------------------
+--------------------------------------------------
+Allocation information from volsmem.c
+860160 words of size 8 bytes callocated for REAL *zcen at 0x146c7a6a1010
+--------------------------------------------------
+--------------------------------------------------mc_prallo.c begin
+Memory allocated using mc_calloc  =      125665 KiloBytes (123 MB)
+Memory allocation total (method 1)=      125665 KiloBytes (123 MB)
+Memory allocation total (method 2)=      125665 KiloBytes (123 MB)
+--------------------------------------------------mc_prallo.c end
