@@ -1,0 +1,311 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |				
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  9                                   	
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      controlDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+application     rhoPimpleFoam;
+
+startFrom       latestTime;
+
+startTime       0;
+
+stopAt          endTime;
+
+endTime         0.5;
+
+//deltaT          1e-05;
+deltaT          5e-05;
+//deltaT          1e-04;
+
+writeControl    runTime;
+writeInterval   0.001;
+purgeWrite      0;
+
+writeFormat     ascii;
+
+writePrecision  8;
+
+writeCompression off;
+
+timeFormat      general;
+
+timePrecision   6;
+
+runTimeModifiable true;
+
+adjustTimeStep  yes;
+maxCo           0.8;
+
+// ************************************************************************* //
+
+functions
+{
+
+///////////////////////////////////////////////////////////////////////////
+
+    additional_fields
+    {
+	type        writeObjects;
+    	libs        ("libutilityFunctionObjects.so");
+
+	objects ("rho" "thermo:mu");
+	//objects ("banana");
+
+        enabled          true;
+
+        writeControl   outputTime;
+	//writeControl   timeStep;
+	//writeInterval  1;
+
+    }
+
+/*
+62
+(
+Cp
+CpPrevIter
+Cv
+CvPrevIter
+K
+KPrevIter
+K_0
+K_0PrevIter
+MRFProperties
+Residuals<scalar>
+Residuals<sphericalTensor>
+Residuals<symmTensor>
+Residuals<tensor>
+Residuals<vector>
+T
+TPrevIter
+U
+UPrevIter
+U_0
+U_0PrevIter
+boundary
+cellZones
+data
+dpdt
+dpdtPrevIter
+e
+ePrevIter
+e_0
+e_0PrevIter
+faceZones
+faces
+fvConstraints
+fvModels
+fvSchemes
+fvSolution
+momentumTransport
+neighbour
+owner
+p
+pPrevIter
+p_0
+p_0PrevIter
+phi
+phi_0
+pointZones
+points
+rho
+rhoPrevIter
+rho_0
+rho_0PrevIter
+solutionControl
+thermo:alpha
+thermo:alphaPrevIter
+thermo:mu
+thermo:muPrevIter
+thermo:psi
+thermo:psiPrevIter
+thermo:psiPrevIter_0
+thermo:psi_0
+thermo:psi_0PrevIter
+thermophysicalProperties
+thermophysicalTransport
+)
+*/
+
+///////////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////////
+
+forceCoeffs_object
+{
+	// rhoInf - reference density
+	// CofR - Centre of rotation
+	// dragDir - Direction of drag coefficient
+	// liftDir - Direction of lift coefficient
+	// pitchAxis - Pitching moment axis
+	// magUinf - free stream velocity magnitude
+	// lRef - reference length
+	// Aref - reference area
+	type forceCoeffs;
+	functionObjectLibs ("libforces.so");
+	//patches ("body1" "body2" "body3");
+	patches (cylinder);
+
+	pName p;
+	Uname U;
+
+	//rho rhoInf;	//only for incompressible
+	rhoInf 1.225;
+
+	//// Dump to file
+	log true;
+
+	CofR (0.0 0 0);
+	liftDir (0 1 0);
+	dragDir (1 0 0);
+	pitchAxis (0 0 1);
+	magUInf 680.0;
+	lRef 1;         // reference lenght
+	Aref 2.0;         // reference area 1 for 2d
+
+        writeControl   timeStep;
+        writeInterval  1;
+}
+
+///////////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////////
+
+yplus
+{
+    type                yPlus;
+    //functionObjectLibs  ("libutilityFunctionObjects.so");
+    functionObjectLibs  ("libfieldFunctionObjects.so");
+
+    enabled true;
+
+    writeControl outputTime;
+    //writeControl timeStep;
+    //writeInterval 1;
+
+    //log true;
+}
+
+///////////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////////
+//OF8
+/*
+minmaxdomainCyl
+{
+	type fieldMinMax;
+	//type banana;
+
+	functionObjectLibs ("libfieldFunctionObjects.so");
+
+	enabled true;
+
+	mode component;
+
+	writeControl timeStep;
+	writeInterval 1;
+
+	log true;
+
+	//fields (p U T rho);
+	fields (p U T thermo:mu);
+}
+*/
+///////////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////////
+
+minmaxdomain_scalar
+{
+    type            volFieldValue;
+    libs            ("libfieldFunctionObjects.so");
+
+    enabled 	    true; 	//true or false
+    log             true;	//write to screen
+    
+    //writeControl    writeTime;
+    writeControl    timeStep;
+    writeInterval   1;
+
+    writeFields     false;	//write solution to field value - Not needed when only reporting value to screen
+
+    writeLocation   true;	//write location in the output file
+
+    //mode component;
+
+    regionType      all;
+
+    operation       none;
+
+    fields
+    (
+        p T thermo:mu rho k omega nut
+    );
+}
+
+minmaxdomain_vector
+{
+    type            volFieldValue;
+    libs            ("libfieldFunctionObjects.so");
+
+    enabled 	    true; 	//true or false
+    log             true;	//write to screen
+    
+    //writeControl    writeTime;
+    writeControl    timeStep;
+    writeInterval   1;
+
+    writeFields     false;	//write solution to field value - Not needed when only reporting value to screen
+
+    writeLocation   true;	//write location in the output file
+
+    //mode component;
+
+    regionType      all;
+
+    operation       none;
+
+    fields
+    (
+        U
+    );
+}
+
+mindomain_scalar
+{
+    $minmaxdomain_scalar
+    operation       min;
+}
+
+mindomain_vector
+{
+    $minmaxdomain_vector
+    operation       minMag;
+}
+
+maxdomain_scalar
+{
+    $minmaxdomain_scalar
+    operation       max;
+}
+
+maxdomain_vector
+{
+    $minmaxdomain_vector
+    operation       maxMag;
+}
+
+///////////////////////////////////////////////////////////////////////////
+
+};
