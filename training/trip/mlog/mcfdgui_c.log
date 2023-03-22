@@ -1,0 +1,190 @@
+200 words of size 1 bytes callocated for char *cvals1 at 0x25efec0
+400 words of size 1 bytes callocated for char *cvals2 at 0x25f1fa0
+200 words of size 1 bytes callocated for char *cvals3 at 0x25f2140
+#################################################
+process id = 2758540
+my_id=0, my_sz=1
+CFD++: Version 19.1, Update 11
+Compilation TIMESTAMP: Jan 22 2022 09:17:56
+MCFD_LICEXT TIMESTAMP: Sat Jan 22 01:02:19 2022
+-------------------------------------------------
+Computer hostname is dvvis02
+Computer system type is LINUX
+#################################################
+Current working directory is:
+/davinci-1/home/apiccolo_ext/Image/training/trip
+#################################################
+#################################################
+Current shell is:
+/bin/bash
+#################################################
+#################################################
+Current Software Version, Update:
+CFD++: Version 19.1, Update 11
+#################################################
+This software is protected by copyright laws
+of the United States of America.
+This software is subject to SBIR Data Rights clauses
+and unauthorized disclosure and distribution is prohibited.
+Timestamp at run-begin: (1679334168Es) Mon Mar 20 18:42:48 2023
+-------------------------------------------------------
+Computer system name is defined in sysname.h
+-------------------------------------------------------
+This is a list of computer-dependent macros:
+(for more information see 'sysdep*.h' files)
+-----------------------------
+Macro Name    Macro expansion
+----------    ---------------
+Computer      LINUX
+INTG          int
+UINTG         unsigned int
+LONGINTG      long int
+INTG8BYTE     long long int
+REAL          double
+REAL8BYTE     double
+MC_OFF_T      long
+SEEK_SET      0
+MC_STDC       1
+CONST         const
+SEEK_CUR      1
+SEEK_END      2
+MCFD_PROCMEM  2G
+MCFD_MAXMEM   2G
+MCFD_SPROCMEM NULL (undefined)
+MCFD_PPROCMEM NULL (undefined)
+SINGLECPU_MC  defined
+OPENGL_MC     defined
+read_imap     2
+writ_imap     2
+read_ima8     3
+writ_ima8     3
+read_fmap     3
+writ_fmap     3
+read_fma4     22
+writ_fma4     27
+read_fma8     3
+writ_fma8     3
+-------------------------------------------------------
+sizeof(char)      = 1 bytes
+sizeof(int)       = 4 bytes
+sizeof(long int)  = 8 bytes
+sizeof(short int) = 2 bytes
+sizeof(long long) = 8 bytes
+sizeof(MC_OFF_T)  = 8 bytes
+sizeof(float)     = 4 bytes
+sizeof(double)    = 8 bytes
+sizeof(void *)    = 8 bytes
+sizeof(size_t)    = 8 bytes
+-------------------------------------------------------
+--------------------------------------------------
+Allocation information from eqnsmem.c
+1192 words of size 4 bytes callocated for INTG *iarr at 0x25f3bb0
+1300 words of size 8 bytes callocated for REAL *rarr at 0x25f4e60
+24576 words of size 1 bytes callocated for char *carr at 0x25f7710
+256 words of size 8 bytes callocated for char **eqnsinf[0].eqntit at 0x25f2400
+256 words of size 8 bytes callocated for char **eqnsinf[0].qprtit at 0x25fd720
+256 words of size 8 bytes callocated for char **eqnsinf[0].ps_qprtit at 0x25fdf30
+--------------------------------------------------
+13 words of size 152 bytes callocated for struct tree *trees at 0x25f2c10
+10 words of size 104 bytes callocated for struct xyzsort *xyzsorts at 0x25fe740
+100 words of size 4 bytes callocated for INTG *cta_nfa_arr1 at 0x25feb60
+100 words of size 4 bytes callocated for INTG *cta_nfa_arr2 at 0x25fed00
+100 words of size 4 bytes callocated for INTG *cta_nvx_arr1 at 0x25feea0
+100 words of size 4 bytes callocated for INTG *cta_nvx_arr2 at 0x25ff040
+100 words of size 4 bytes callocated for INTG *cta_nfv_arr1 at 0x25ff1e0
+100 words of size 4 bytes callocated for INTG *cta_nfv_arr2 at 0x25ff380
+100 words of size 4 bytes callocated for INTG *cta_nfv_arr3 at 0x25ff520
+100 words of size 4 bytes callocated for INTG *cta_nfv_arr4 at 0x25ff6c0
+100 words of size 4 bytes callocated for INTG *cta_nfv_arr5 at 0x25ff860
+100 words of size 4 bytes callocated for INTG *cta_nfv_arr6 at 0x25ffa00
+100 words of size 4 bytes callocated for INTG *cta_nfv2_arr1 at 0x25ffba0
+100 words of size 4 bytes callocated for INTG *cta_nfv2_arr2 at 0x25ffd40
+100 words of size 4 bytes callocated for INTG *cta_nfv2_arr3 at 0x25ffee0
+100 words of size 4 bytes callocated for INTG *cta_nfv2_arr4 at 0x2600080
+100 words of size 4 bytes callocated for INTG *cta_nfv2_arr5 at 0x2600220
+100 words of size 4 bytes callocated for INTG *cta_nfv2_arr6 at 0x26003c0
+100 words of size 4 bytes callocated for INTG *cta_bva_arr1 at 0x2600560
+100 words of size 4 bytes callocated for INTG *cta_bva_arr2 at 0x2600700
+100 words of size 4 bytes callocated for INTG *cta_cva_arr1 at 0x26008a0
+100 words of size 4 bytes callocated for INTG *cta_cva_arr2 at 0x2600a40
+##################FlexLM_License_Checkout_Begin##################
+Checked out Feature "MCFD_GUI" (count=1)
+-------------------------------------------------------
+Feature "MCFD_GUI":
+Version Limit = 21.9
+Expiry Date = 30-apr-2023
+Total Number of Licenses = 20
+Number of Licenses reserved in this run = 1
+Server Name = L00300C002531
+Server Port#= 1650
+Daemon Name = METACOMP
+-------------------------------------------------------
+###################FlexLM_License_Checkout_End###################
+##################FlexLM_License_Checkin_Begin##################
+-------------------------------------------------------
+Feature "MCFD_GUI":
+Version Limit = 21.9
+Expiry Date = 30-apr-2023
+Total Number of Licenses= 20
+Number of Licenses reserved in this run = 1
+Server Name = L00300C002531
+Server Port#= 1650
+Daemon Name = METACOMP
+Feature "MCFD_GUI" has now been checked back in (count=1)
+-------------------------------------------------------
+FlexLM License Management Successfully Completed
+###################FlexLM_License_Checkin_End###################
+1000 words of size 4 bytes callocated for INTG *ebcsel at 0x30a6200
+100 words of size 4 bytes callocated for INTG *ebcver at 0x30a04f0
+100 words of size 4 bytes callocated for INTG *verts at 0x30a0690
+For bc selector #1, number of ebc faces = 5376
+For bc selector #2, number of ebc faces = 17920
+For bc selector #3, number of ebc faces = 15360
+For bc selector #4, number of ebc faces = 5120
+For bc selector #5, number of ebc faces = 6272
+885417 words of size 4 bytes callocated for INTG *ebcnod at 0x147b317ab010
+1000 words of size 4 bytes callocated for INTG *ebcsel at 0x308c860
+100 words of size 4 bytes callocated for INTG *ebcver at 0x3076030
+100 words of size 4 bytes callocated for INTG *verts at 0x3075db0
+100 words of size 4 bytes callocated for INTG *aVert1 at 0x3075a20
+100 words of size 4 bytes callocated for INTG *aVert2 at 0x3075690
+For bc selector #1, number of ebc faces = 5376
+For bc selector #2, number of ebc faces = 17920
+For bc selector #3, number of ebc faces = 15360
+For bc selector #4, number of ebc faces = 5120
+For bc selector #5, number of ebc faces = 6272
+5 words of size 4 bytes callocated for INTG *bc_ison at 0x30e5620
+5 words of size 4 bytes callocated for INTG *wsh_ison at 0x30df9d0
+5 words of size 4 bytes callocated for INTG *norm_ison at 0x307a4f0
+9 words of size 4 bytes callocated for GLfloat *Colr at 0x46d0cd0
+9 words of size 4 bytes callocated for GLfloat *Colg at 0x3e31870
+9 words of size 4 bytes callocated for GLfloat *Colb at 0x307a860
+50049 words of size 4 bytes callocated for INTG *ebcvap at 0x46ee1c0
+200192 words of size 4 bytes callocated for INTG *ebcvar at 0x47524a0
+50048 words of size 4 bytes callocated for INTG *ebcseq at 0x4815cb0
+150150 words of size 8 bytes callocated for REAL *bcnvar at 0x4846ac0
+--------------------------------------------------
+Allocation information from exbcsurf.c
+50051 words of size 4 bytes callocated for INTG *f_n_p at 0x496bf00
+400384 words of size 4 bytes callocated for INTG *f_n_v at 0x499cd20
+--------------------------------------------------
+--------------------------------------------------
+Allocation information from exbcsurf.c
+50049 words of size 4 bytes callocated for INTG *cofptr at 0x4b23d30
+200192 words of size 4 bytes callocated for INTG *cofins at 0x4b54b40
+200192 words of size 4 bytes callocated for INTG *cofout at 0x4c18350
+50050 words of size 1 bytes callocated for char *this at 0x308e1c0
+50050 words of size 1 bytes callocated for char *that at 0x471efd0
+200204 bytes previously allocated for INTG *f_n_p at 0x496bf00 has been freed
+1601536 bytes previously allocated for INTG *f_n_v at 0x499cd20 has been freed
+50050 bytes previously allocated for char *this at 0x308e1c0 has been freed
+50050 bytes previously allocated for char *that at 0x471efd0 has been freed
+--------------------------------------------------
+--------------------------------------------------mc_prallo.c begin
+Memory allocated using mc_calloc  =        9491 KiloBytes (9 MB)
+Memory freed     using mc_free    =       -1857 KiloBytes (-2 MB)
+Memory allocation total (method 1)=        7634 KiloBytes (7 MB)
+Memory allocation total (method 2)=        7635 KiloBytes (7 MB)
+--------------------------------------------------mc_prallo.c end
+15 words of size 8 bytes callocated for REAL *boundMax at 0x30b0220
+15 words of size 8 bytes callocated for REAL *boundMin at 0x3076ba0
