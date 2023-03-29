@@ -1,0 +1,21 @@
+        type            fieldAverage;
+        functionObjectLibs ("libfieldFunctionObjects.so" );
+        enabled         true;
+        timeStart       140;
+        timeEnd         185;
+        writeControl   outputTime;
+        writeInterval   1;
+
+        fields
+        (
+            p
+	    {
+	      mean on;
+	    }
+
+	    U
+            {
+              mean on;
+            }
+ 
+        );

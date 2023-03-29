@@ -1,0 +1,92 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2006                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "185/uniform/functionObjects";
+    object      functionObjectProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+results
+{
+    forces
+    {
+        vector
+        {
+            normalForce     ( -0.0102925 0.310572 -7.91332e-22 );
+            tangentialForce ( 0.00229722 0.000108851 -2.73339e-19 );
+            porousForce     ( 0 0 0 );
+            normalMoment    ( -0.155286 -0.00514623 0.114786 );
+            tangentialMoment ( -5.44254e-05 0.00114861 2.83211e-06 );
+            porousMoment    ( 0 0 0 );
+        }
+    }
+    forceCoeffs
+    {
+        scalar
+        {
+            Cd              0.02131256403467136;
+            Cs              7.45047196927564e-19;
+            Cl              0.8443947945792087;
+            CmRoll          -0.4221973972896045;
+            CmPitch         -0.3119795932440373;
+            CmYaw           0.01065628201733569;
+            Cd(f)           -0.4115411152722688;
+            Cd(r)           0.4328536793069402;
+            Cs(f)           0.01065628201733569;
+            Cs(r)           -0.01065628201733569;
+            Cl(f)           0.1102178040455671;
+            Cl(r)           0.7341769905336417;
+        }
+    }
+}
+
+fieldAverage1
+{
+    rhoU
+    {
+        totalIter       813451;
+        totalTime       165.000202839917;
+    }
+    U
+    {
+        totalIter       813451;
+        totalTime       165.000202839917;
+    }
+    p
+    {
+        totalIter       813451;
+        totalTime       165.000202839917;
+    }
+    T
+    {
+        totalIter       813451;
+        totalTime       165.000202839917;
+    }
+    rho
+    {
+        totalIter       813451;
+        totalTime       165.000202839917;
+    }
+    mu
+    {
+        totalIter       813451;
+        totalTime       165.000202839917;
+    }
+    nuTilda
+    {
+        totalIter       813451;
+        totalTime       165.000202839917;
+    }
+}
+
+
+// ************************************************************************* //
